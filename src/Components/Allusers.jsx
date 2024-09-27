@@ -54,7 +54,7 @@ const Allusers = () => {
   return (
     <>
       {/* Search bar */}
-      <div className="search-container d-flex justify-content-center mt-2">
+      <div className="search-container d-flex justify-content-center mt-2 mb-2">
         <input
           type="text"
           className="search-bar border rounded-3 p-2"
