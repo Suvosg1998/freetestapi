@@ -67,7 +67,7 @@ const Allusers = () => {
           value={searchQuery}
           onChange={handleSearchChange}
         />
-        <Button variant="secondary" onClick={handleReset}>
+        <Button variant="danger" onClick={handleReset}>
           Reset
         </Button>
       </div>
