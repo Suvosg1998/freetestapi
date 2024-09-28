@@ -45,6 +45,11 @@ const Allusers = () => {
     setSearchQuery(event.target.value.toLowerCase());
   };
 
+  // Handler to reset the search input
+  const handleReset = () => {
+    setSearchQuery(''); // Clear the search query
+  };
+
   // Filter the users based on the search query
   const filteredUsers = state.filter((user) =>
     user.username.toLowerCase().includes(searchQuery) ||
@@ -53,8 +58,8 @@ const Allusers = () => {
 
   return (
     <>
-      {/* Search bar */}
-      <div className="search-container d-flex justify-content-center mt-2 mb-2">
+      {/* Search bar and Reset button */}
+      <div className="search-container d-flex justify-content-between mt-2 mb-2">
         <input
           type="text"
           className="search-bar border rounded-3 p-2"
@@ -62,6 +67,9 @@ const Allusers = () => {
           value={searchQuery}
           onChange={handleSearchChange}
         />
+        <Button variant="secondary" onClick={handleReset}>
+          Reset
+        </Button>
       </div>
 
       <Table striped bordered hover>
