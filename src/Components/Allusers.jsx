@@ -3,7 +3,6 @@ import axios from 'axios';
 import { baseURL, endURL } from '../api/ApiURL';
 import Table from 'react-bootstrap/Table';
 import { Button, Modal, Form } from 'react-bootstrap'; // Import Form for the search input
-import { Link } from 'react-router-dom';
 
 const Allusers = () => {
   let api = baseURL + endURL.users;
@@ -59,7 +58,7 @@ const Allusers = () => {
   return (
     <>
       {/* Search bar and Reset button */}
-      <div className="search-container d-flex justify-content-between mt-2 mb-2">
+      <div className="search-container d-flex justify-content-center mt-2 mb-2">
         <input
           type="text"
           className="search-bar border rounded-3 p-2"
@@ -67,7 +66,7 @@ const Allusers = () => {
           value={searchQuery}
           onChange={handleSearchChange}
         />
-        <Button variant="danger" onClick={handleReset}>
+        <Button variant="danger" className='mx-3' onClick={handleReset}>
           Reset
         </Button>
       </div>
@@ -115,7 +114,9 @@ const Allusers = () => {
               <h4>Address:</h4>
               <p><strong>City:</strong> {selectedUser.address.city}</p>
               <p><strong>Street:</strong> {selectedUser.address.street}</p>
-              <p><strong>Zip Code:</strong> {selectedUser.address.zip}</p>
+              <p><strong>Zip Code:</strong> {selectedUser.address.zip}</p><br />
+              <h4>Hobbies:</h4>
+              <p>{selectedUser.hobbies.map(String).join(', ')}</p>
             </div>
           ) : (
             <p>No user selected.</p>
