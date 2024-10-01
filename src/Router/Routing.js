@@ -8,6 +8,7 @@ const Routing = () => {
     <div>
         <Router>
             <Header/>
+             <Allusers/>
             <Routes>
                 <Route path='allusers'element={<Allusers/>}/>
             </Routes>
