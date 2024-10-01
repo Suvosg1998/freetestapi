@@ -9,7 +9,6 @@ const Header = () => {
         <Container>
           <Navbar.Brand href="/">Navbar</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="/allusers">AllUsers</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
