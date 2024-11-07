@@ -1,4 +1,5 @@
-export const baseURL="https://freetestapi.com"
+export const baseURL="https://api.coincap.io"
+
 export const endURL={
-    users:"/api/v1/users"
+    users:"/v2/assets/",
 }
