@@ -1,5 +1,5 @@
-export const baseURL="https://api.coincap.io"
+export const baseURL="https://dummyjson.com"
 
 export const endURL={
-    users:"/v2/assets/",
+    users:"/users",
 }
